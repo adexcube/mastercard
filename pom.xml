@@ -13,7 +13,6 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>eshop-mastercardbank</name>
 	<description>Spring project Practice</description>
-
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
