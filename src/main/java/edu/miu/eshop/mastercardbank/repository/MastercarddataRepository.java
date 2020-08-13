@@ -10,6 +10,6 @@ import edu.miu.eshop.mastercardbank.domain.Mastercarddata;
 
 @Repository
 public interface MastercarddataRepository extends MongoRepository<Mastercarddata, BigInteger> {
-
+	public Mastercarddata findMastercarddataBycardHolder(String cardname);
 	
 }

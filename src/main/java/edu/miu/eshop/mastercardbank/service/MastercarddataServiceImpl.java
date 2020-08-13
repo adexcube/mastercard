@@ -58,10 +58,22 @@ public class MastercarddataServiceImpl implements MastercarddataService {
 	double amt = mastercarddata.getAmount();
 	amt = amt - amount;
 	mastercarddata.setAmount(amt);
+	Mastercarddata master = repository.findMastercarddataBycardHolder("GROUP 3 ACCOUNT");
+	double newamt = master.getAmount();
+	newamt += amount;
+	master.setAmount(newamt);
+	saveMastercarddata(master);
 	saveMastercarddata(mastercarddata);
 	
 	return true;
 	
 }
+	
+
+	@Override
+	public double getBalanceOfAccount(String cardname) {
+		Mastercarddata master = repository.findMastercarddataBycardHolder(cardname);
+		return master.getAmount();
+	}
 	
 }

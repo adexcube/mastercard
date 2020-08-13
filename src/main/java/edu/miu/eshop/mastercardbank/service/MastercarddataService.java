@@ -12,4 +12,5 @@ public interface MastercarddataService {
 	public void saveMastercarddata(Mastercarddata data );
 	public List<Mastercarddata> getMastercarddata();
 	public boolean confirmTransaction(Transaction transaction);
+	public double getBalanceOfAccount(String cardname);
 }
